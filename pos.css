@@ -1,64 +1,92 @@
-*{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-html, body{
-	height: 200%;
-	width:  100%;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 100%;
+html, body {
+  height: 200%;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  margin: 1rem 0;
+}
+
+section {
+  background: lightgrey;
+  border-bottom: 1px solid #000;
+  min-height: 600px;
+  margin-top: 2rem;
+  outline: 1px solid red;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+  outline: 1px solid blue;
+}
+
+.row {
+  width: 100%;
+  height: 600px;
+	position: relative; /* wenn wir position row sagen, dann sind alle 4 Kästchen wieder in der row */
+}
+
+.col {
+  width: 200px;
+  height: 200px;
+}
+
+/* wir fügen jetzt Position dazu */
+.electric-purple {
+  background: #C200FB;
+  position: absolute;
+ 	bottom: 0;
+  /*bedeutet null Abstand vom oberen Bildschirmrand*/
+  right:0;
+  /* ist nun rechts oben in der Ecke, rechts oben 0 Abstand vom Rand */
+	z-index: 2;
+}
+
+.raspberry {
+  background: #EC0868;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+	z-index: 3;
+}
+
+.ferrari-red {
+  background: #FC2F00;
+  position: absolute;
+  bottom: 0;
+  right: -100px;
+	z-index: 1;  /* z ist z Ebene, wir vergeben Wert dafür */
+}
+
+.black {
+  background: #000;
+  position:fixed;
+  top: 0;
+  right: 0; /* verschiebt sich durch -200 nach rechts außen, -200 weil im Code untersucht dass es insg 200 px breit ist, dann minus, weil raus */
 
 }
 
-h1{
-	margin: 1rem 0;
+.blabla{
+	position: absolute;
+	background: #fff;
+	padding: .5rem;
+	bottom: 100%;
+	right: 0;
+	display: none;
 }
-
-section{
-	background: lightgrey;
-	border-bottom: 1px solid #000;
-	min-height: 600px;
-	margin-top: 2rem;
-	outline: 1px solid red;
+span{
+	position: relative;
+	display: inline-block;
+color: blue;}
 
 
-}
-
-.wrapper{
-	max-width: 600px;
-	margin: auto;
-	outline: 1px solid blue;
-
-}
-
-.row{
-	width: 100%;
-	height: 600px;
-
-}
-
-.col{
-	width: 200px;
-	height: 200px;
-}
-
-.electric-purple{
-	background: #C200FB;
-
-}
-
-.raspberry{
-	background: #EC0868;
-
-
-}
-
-.ferrari-red{
-	background: #FC2F00;
-
-}
-
-.black{
-	background: #000;
-
-}
+	span:hover .blabla{
+		display: inline-block;
+	}
